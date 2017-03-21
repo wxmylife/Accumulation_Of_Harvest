@@ -12,4 +12,24 @@
 ### 什么是NDK
 
     ndk: native develop kits(本地开发工具包).
+    
+    
+### C语言基本类型
+
+#### 长度
+
+| 类型 | 长度 |
+| :-: | :-: |
+| int | 4 |
+| char | 1 |
+| float | 4 |
+| double | 8 |
+| long | 8 |
+| short | 2 |
+| signed | 4 |
+| unsigned | 4 | 
+| void | 1 |
+
+
+
 
