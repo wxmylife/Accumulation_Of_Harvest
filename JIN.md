@@ -52,6 +52,37 @@
        2. 执行命令:
             **javah com.wxmylife.morgan.JNI**
        3. 生成头文件: 
-            **com_wxmylife_morgan_JIN.h**
+            **com_wxmylife_morgan_JNI.h**
+       4. 函数声明：JNIEXPORT jstring JNICALL Java_wxmylife_morgan_JIN_getMessage(JNIEnv*,jobject);
        ~~~
+       
+    3. 将生成的头文件转移到jni文件夹下
+    4. 在jni下定义对应的函数文件：message.c
+        
+        ```
+        #include "com_wxmylife_morgan_JNI.h"
+        JNIEXPORT jstring JNICALL Jave_com_wxmylife_morgan_JNI_getMessage(JNIEnv* env,jobject jobj){
+    return (*env)->NewStringUTF(env,"wxmylife");                
+}
+        ```
+    5. ~~在jni文件夹下创建一个空的c文件：empty.c~~
+      ~~ ***说明：这是AS的bug,必须至少两个c文件才能通过编译***~~
+
+- 指定编译不同的CPU
+
+    ```
+    defaultConfig{
+        ndk{
+            moduleName "HelloJni"       //so文件 lib+moduleName+.so
+            abiFilters "armeabi","armeabi-v7a","x86" //cpu类型
+        }
+    }
+    ```
+    
+- 编译生成不同平台下的动态链接文件
+    1. 执行`rebuild`,生成so文件
+    2. so文件目录：`build\intermediates\ndk\debug\lib\...`
+- 调用native方法
+    1. 在native方法所在的类中加载so文件
+
 
