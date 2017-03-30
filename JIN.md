@@ -11,9 +11,8 @@
 
 ## JNI协议
 
-
 |Java类型| JNI别名 | 本地类型 |  
-| :-: | :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | boolean | jboolean | unsigned char |
 | byte | jbyte | signed char | 
 | char | jchar  | unsigned short | 
@@ -22,7 +21,6 @@
 | long | jlong | long long | 
 | float | jfloat | float |  
 | double | jdouble | double |  
-
 
 ## 使用流程
 
@@ -50,10 +48,11 @@
        ~~~
        1. 进入java文件夹；
        2. 执行命令:
-            **javah com.wxmylife.morgan.JNI**
+            javah com.wxmylife.morgan.JNI
        3. 生成头文件: 
-            **com_wxmylife_morgan_JNI.h**
-       4. 函数声明：JNIEXPORT jstring JNICALL Java_wxmylife_morgan_JIN_getMessage(JNIEnv*,jobject);
+            com_wxmylife_morgan_JNI.h
+       4. 函数声明：
+                JNIEXPORT jstring JNICALL Java_wxmylife_morgan_JIN_getMessage(JNIEnv*,jobject);
        ~~~
        
     3. 将生成的头文件转移到jni文件夹下
@@ -61,10 +60,12 @@
         
         ```
         #include "com_wxmylife_morgan_JNI.h"
-        JNIEXPORT jstring JNICALL Jave_com_wxmylife_morgan_JNI_getMessage(JNIEnv* env,jobject jobj){
-    return (*env)->NewStringUTF(env,"wxmylife");                
-}
+        JNIEXPORT jstring JNICALL
+        Jave_com_wxmylife_morgan_JNI_getMessage(JNIEnv* env,jobject jobj){
+            return (*env)->NewStringUTF(env,"wxmylife");                
+        }
         ```
+        
     5. ~~在jni文件夹下创建一个空的c文件：empty.c~~
       ~~ ***说明：这是AS的bug,必须至少两个c文件才能通过编译***~~
 
