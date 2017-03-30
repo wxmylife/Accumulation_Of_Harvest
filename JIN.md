@@ -9,6 +9,21 @@
 
 > ndk: native develop kits(本地开发工具包).
 
+## JNI协议
+
+
+|Java类型| JNI别名 | 本地类型 |  
+| :-: | :-: | :-: | :-: |
+| boolean | jboolean | unsigned char |
+| byte | jbyte | signed char | 
+| char | jchar  | unsigned short | 
+| short | jshort | short |  
+| int | jint | int |
+| long | jlong | long long | 
+| float | jfloat | float |  
+| double | jdouble | double |  
+
+
 ## 使用流程
 
 - 安装配置NDk
@@ -35,8 +50,8 @@
        ~~~
        1. 进入java文件夹；
        2. 执行命令:
-            **javah com.wxmylife.morgen.JNI**
+            **javah com.wxmylife.morgan.JNI**
        3. 生成头文件: 
-            **com_wxmylife_morgen_JIN.h**
+            **com_wxmylife_morgan_JIN.h**
        ~~~
 
