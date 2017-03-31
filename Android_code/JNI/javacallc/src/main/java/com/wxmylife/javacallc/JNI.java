@@ -6,6 +6,10 @@ package com.wxmylife.javacallc;
 
 public class JNI {
 
+    {
+        System.loadLibrary("javacallc");
+    }
+
     public native int add(int x,int y);
 
     public native String sayHello(String s);
