@@ -87,4 +87,9 @@
 - 调用native方法
     1. 在native方法所在的类中加载so文件
 
+    
+    
+- 生成头文件的两种方式
+    1. 在工程目录下`app\src\main\java`执行命令：`javah com.wxmylife.javacallc.JNI`
+    2. 在项目的`build/intermaediates/classes/debug/`下执行命令：`javah -classpath.jni 类路径.JNI类`
 
