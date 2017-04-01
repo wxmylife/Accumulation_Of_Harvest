@@ -46,3 +46,16 @@ jstring Java_com_wxmylife_javacallc_JNI_sayHello
 }
 
 
+JNIEXPORT jintArray JNICALL Java_com_wxmylife_javacallc_JNI_increaseArrayEles
+        (JNIEnv *env, jobject jobject, jintArray array){
+    int size =(*env)->GetArrayLength(env,array);
+    jint* intArray=(*env)->GetIntArrayElements(env,array,JNI_FALSE);
+    int i;
+    for ( i = 0; i < size; i++) {
+        *(intArray+i)=*(intArray+i)+6;
+//        *(intArray+i)+=5;
+    }
+    return array;
+}
+
+

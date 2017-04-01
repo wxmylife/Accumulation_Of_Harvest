@@ -29,8 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void array(View view){
         int[] array={1,2,3,4,5,6};
-        String arrayTxt=new JNI().increaseArrayEles(array).toString();
-        textView.setText(arrayTxt);
+        int[] result=  new JNI().increaseArrayEles(array);
+        StringBuffer stringBuffer=new StringBuffer();
+        for (int i : result) {
+            stringBuffer.append(i+",");
+        }
+        textView.setText(stringBuffer.toString());
     }
 
     public void checkpwd(View view){
