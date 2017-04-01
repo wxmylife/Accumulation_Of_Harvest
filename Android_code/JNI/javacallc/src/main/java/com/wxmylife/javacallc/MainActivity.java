@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void checkpwd(View view){
-        textView.setText(new JNI().checkPwd("123"));
+        int code=new JNI().checkPwd("12345");
+
+        textView.setText(code==200?"true":"false");
     }
 }

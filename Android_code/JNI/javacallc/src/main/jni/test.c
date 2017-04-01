@@ -58,4 +58,14 @@ JNIEXPORT jintArray JNICALL Java_com_wxmylife_javacallc_JNI_increaseArrayEles
     return array;
 }
 
-
+JNIEXPORT jint JNICALL Java_com_wxmylife_javacallc_JNI_checkPwd
+        (JNIEnv *env, jobject jobject, jstring jstring){
+    char* pwd="12345";
+    char* txt=_JString2CStr(env,jstring);
+    int code =strcmp(pwd,txt);
+    if(code==0){
+        return 200;
+    } else{
+        return 400;
+    }
+}
