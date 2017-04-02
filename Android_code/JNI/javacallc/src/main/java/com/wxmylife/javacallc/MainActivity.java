@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void string(View view){
        String result= new JNI().sayHello("i love u");
-        // Log.e("wxmylife",result);
         textView.setText(result);
     }
 
