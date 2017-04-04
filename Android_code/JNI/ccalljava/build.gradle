@@ -10,7 +10,10 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-
+        ndk{
+            moduleName "ccalljava"
+            abiFilters "armeabi","armeabi-v7a","x86"
+        }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
