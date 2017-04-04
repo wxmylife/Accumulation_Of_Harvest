@@ -24,7 +24,7 @@ public class JNI {
     public native void callBackSayHello();
 
     public int add(int x,int y){
-        Log.e(TAG,"add()");
+        Log.e(TAG,"add()"+"x===="+x+";y====="+y);
         return x+y;
     }
 
