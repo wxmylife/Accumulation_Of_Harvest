@@ -92,4 +92,12 @@
 - 生成头文件的两种方式
     1. 在工程目录下`app\src\main\java`执行命令：`javah com.wxmylife.javacallc.JNI`
     2. 在项目的`build/intermaediates/classes/debug/`下执行命令：`javah -classpath . -jni 类路径.JNI类`
+    
+## 回调
+### C调java
+> c回调java核心思想是**反射**
+
+- 如何得到一个方法的签名
+    1. 在命令窗口中，进入应用的class/debug目录
+    2. 执行命令`javap -s 全类名`,显示所有方法的签名信息
 
