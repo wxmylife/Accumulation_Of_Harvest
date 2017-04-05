@@ -14,6 +14,9 @@ android {
             moduleName "ccalljava"
             abiFilters "armeabi","armeabi-v7a","x86"
         }
+        ndk{
+            ldLibs "log"
+        }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
