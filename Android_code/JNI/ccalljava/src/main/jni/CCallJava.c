@@ -22,5 +22,5 @@ JNIEXPORT void JNICALL Java_com_wxmylife_ccalljava_JNI_callbackAdd
     jobject jobject=(*env)->AllocObject(env,jclazz);
     //4.调用方法
     jint value=(*env)->CallIntMethod(env,jobject,jmethodID1,500,20);
-    LOGD("value=====%d\n",value);
+    LOGE("value=====%d\n",value);
 };
