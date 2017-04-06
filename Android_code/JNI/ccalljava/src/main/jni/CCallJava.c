@@ -28,12 +28,17 @@ JNIEXPORT void JNICALL Java_com_wxmylife_ccalljava_JNI_callbackAdd
 
 JNIEXPORT void JNICALL Java_com_wxmylife_ccalljava_JNI_callBackHelloFromJava
         (JNIEnv *env, jobject jobj){
-    //1.得到字节码
     jclass jclazz=(*env)->FindClass(env,"com/wxmylife/ccalljava/JNI");
-    //2.得到方法
     jmethodID  jmethodID1=(*env)->GetMethodID(env,jclazz,"helloFromJava","()V");
-    //3.实例化该类
     jobject jobject=(*env)->AllocObject(env,jclazz);
-    //4.调用方法
     (*env)->CallVoidMethod(env,jobject,jmethodID1);
-}
+};
+
+JNIEXPORT void JNICALL Java_com_wxmylife_ccalljava_JNI_callBackPrintString
+        (JNIEnv *env, jobject jobj){
+    jclass jclazz=(*env)->FindClass(env,"com/wxmylife/ccalljava/JNI");
+    jmethodID  jmethodID1=(*env)->GetMethodID(env,jclazz,"printString","(Ljava/lang/String;)V");
+    jobject jobject=(*env)->AllocObject(env,jclazz);
+    jstring jst=(*env)->NewStringUTF(env,"i love wxmylife");
+    (*env)->CallVoidMethod(env,jobject,jmethodID1,jst);
+};

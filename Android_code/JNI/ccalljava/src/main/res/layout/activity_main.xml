@@ -9,19 +9,19 @@
 
     <Button
         android:onClick="add"
-        android:text="ccalljava_for_add"
+        android:text="callbackAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
         android:onClick="string"
-        android:text="javacallc_for_string"
+        android:text="callBackHelloFromJava"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:onClick="array"
-        android:text="javacallc_for_array"
+        android:onClick="print"
+        android:text="callBackPrintString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

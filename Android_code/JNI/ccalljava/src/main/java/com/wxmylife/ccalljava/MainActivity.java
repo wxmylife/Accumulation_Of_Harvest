@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
     public void string(View view){
         new JNI().callBackHelloFromJava();
     }
+
+    public void print(View view){
+        new JNI().callBackPrintString();
+    }
 }
