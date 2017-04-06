@@ -12,7 +12,8 @@ extern "C" {
  * Method:    callbackAdd
  * Signature: ()V
  */
- ;
+JNIEXPORT void JNICALL Java_com_wxmylife_ccalljava_JNI_callbackAdd
+        (JNIEnv *, jobject);
 
 /*
  * Class:     com_wxmylife_ccalljava_JNI

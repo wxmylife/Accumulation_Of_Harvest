@@ -15,4 +15,9 @@ public class MainActivity extends AppCompatActivity {
     public void add(View view){
         new JNI().callbackAdd();
     }
+
+
+    public void string(View view){
+        new JNI().callBackHelloFromJava();
+    }
 }
