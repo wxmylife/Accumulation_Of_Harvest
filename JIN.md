@@ -121,3 +121,5 @@
     1. 在命令窗口中，进入应用的class/debug目录
     2. 执行命令`javap -s 全类名`,显示所有方法的签名信息
 
+[传送门](https://github.com/wxmylife/Accumulation_Of_Harvest/blob/master/Android_code/JNI/ccalljava/src/main/java/com/wxmylife/ccalljava/MainActivity.java)
+
