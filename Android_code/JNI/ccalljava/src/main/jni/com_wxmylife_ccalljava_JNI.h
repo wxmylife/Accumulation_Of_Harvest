@@ -39,6 +39,8 @@ JNIEXPORT void JNICALL Java_com_wxmylife_ccalljava_JNI_callBackPrintString
 JNIEXPORT void JNICALL Java_com_wxmylife_ccalljava_JNI_callBackSayHello
   (JNIEnv *, jobject);
 
+
+
 #ifdef __cplusplus
 }
 #endif
