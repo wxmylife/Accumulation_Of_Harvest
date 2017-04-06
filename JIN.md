@@ -123,3 +123,18 @@
 
 [传送门](https://github.com/wxmylife/Accumulation_Of_Harvest/blob/master/Android_code/JNI/ccalljava/src/main/java/com/wxmylife/ccalljava/MainActivity.java)
 
+
+## 直接使用.so文件
+ 1. 拷贝.so文件到当前工程的main/jniLibs目录下
+ 2. 不需要配置
+ 
+    ```
+    ndk{
+        moduleName ""
+        abiFilters ""
+    }
+    ```
+    
+ 3. 不用写c
+
+
