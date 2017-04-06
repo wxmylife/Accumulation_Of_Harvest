@@ -24,4 +24,8 @@ public class MainActivity extends AppCompatActivity {
     public void print(View view){
         new JNI().callBackPrintString();
     }
+
+    public void staticPrint(View view){
+        new JNI().callBackSayHello();
+    }
 }

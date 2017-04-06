@@ -42,3 +42,13 @@ JNIEXPORT void JNICALL Java_com_wxmylife_ccalljava_JNI_callBackPrintString
     jstring jst=(*env)->NewStringUTF(env,"i love wxmylife");
     (*env)->CallVoidMethod(env,jobject,jmethodID1,jst);
 };
+
+
+JNIEXPORT void JNICALL Java_com_wxmylife_ccalljava_JNI_callBackSayHello
+        (JNIEnv *env, jobject jobj){
+    jclass jclazz=(*env)->FindClass(env,"com/wxmylife/ccalljava/JNI");
+    jmethodID  jmethodID1=(*env)->GetStaticMethodID(env,jclazz,"sayHello","(Ljava/lang/String;)V");
+
+    jstring jst=(*env)->NewStringUTF(env,"i love wxmylife");
+    (*env)->CallStaticVoidMethod(env,jclazz,jmethodID1,jst);
+};

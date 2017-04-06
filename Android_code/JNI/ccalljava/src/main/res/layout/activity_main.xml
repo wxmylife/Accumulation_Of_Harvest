@@ -26,4 +26,9 @@
         android:layout_height="wrap_content"/>
 
 
+    <Button
+        android:onClick="staticPrint"
+        android:text="callBackSayHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
